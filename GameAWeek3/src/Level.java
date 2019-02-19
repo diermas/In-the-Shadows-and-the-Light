@@ -7,20 +7,11 @@ public class Level {
 	private int cellHeight;
 	private PApplet parent;
 	
-	public Level(int width, int height, int cellsWidth, int cellsHeight, PApplet parent) {
-		tileMap = new int[cellsHeight][cellsWidth];
+	public Level(int width, int height, int cellsWidth, int cellsHeight, PApplet parent, int[][] tileMap) {
+		this.tileMap = tileMap;
 		cellWidth = width/cellsWidth;
 		cellHeight = height/cellsHeight;
 		this.parent = parent;
-		for (int y = 0; y < tileMap.length; y++) {
-			if (!(y == 0 || y == tileMap.length-1)) {
-				for (int x = 0; x < tileMap[y].length; x++) {
-					if (!(x == 0 || x == tileMap[y].length-1)) {
-						tileMap[y][x] = 1;
-					}
-				}
-			}
-		}
 	}
 	
 	public void render() {
@@ -29,12 +20,14 @@ public class Level {
 				switch (tileMap[y][x]) {
 				case 0:
 					parent.fill(0);
+					parent.stroke(0);
 					break;
 				case 1:
-					parent.fill(150);
+					parent.fill(255);
+					parent.stroke(255);
 					break;
 				}
-				parent.rect(y*cellHeight,x*cellWidth,cellHeight,cellWidth);
+				parent.rect(x*cellWidth,y*cellHeight,cellHeight,cellWidth);
 			}
 		}
 	}
@@ -46,6 +39,18 @@ public class Level {
 				level = level + tileMap[y][x] + " ";
 			}
 			System.out.println(level);
+		}
+	}
+	
+	public void toggleLevel() {
+		for (int y = 0; y < tileMap.length; y++) {
+			for (int x = 0; x < tileMap[y].length; x++) {
+				if (tileMap[y][x] == 0) {
+					tileMap[y][x] = 1;
+				} else if (tileMap[y][x] == 1) {
+					tileMap[y][x] = 0;
+				}
+			}
 		}
 	}
 }
