@@ -1,0 +1,12 @@
+---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 B B B 1 1 D 
+D 1 1 1 B B B 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D D D D D D D D D D 
+---
