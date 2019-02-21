@@ -35,7 +35,7 @@ public class LightDark extends PApplet{
 				sprites[i][j] = spritesheet.get(j*90,i*90,90,90);
 			}
 		}
-		levelFile = new String[100][10];
+		levelFile = new String[1000][10];
 		readLevel();
 		surface.setTitle("In the Shadows and the Light");
 		start = new StartMenu(this, height, width);
@@ -72,7 +72,7 @@ public class LightDark extends PApplet{
 				if (player.hasKey()) {
 					level++;
 					player.reset();
-					if (level < 4) {
+					if (levelFile[level*10][0] != null) {
 						levelObject = new Level(width,height,cells,cells,this,getLevel(level),sprites);
 					} else {
 						gameMode = 2;
