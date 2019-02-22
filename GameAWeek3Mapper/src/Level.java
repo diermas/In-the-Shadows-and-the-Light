@@ -36,8 +36,12 @@ public class Level {
 		chooseImage(1050,160,60,60,'9');
 		chooseImage(1050,220,60,60,'6');
 		chooseImage(1050,280,60,60,'7');
-		chooseImage(850,400,60,60,'A');
-		chooseImage(850,460,60,60,'B');
+		chooseImage(750,400,60,60,'A');
+		chooseImage(750,460,60,60,'B');
+		chooseImage(850,280,60,60,'I');
+		chooseImage(850,340,60,60,'i');
+		chooseImage(850,400,60,60,'J');
+		chooseImage(850,460,60,60,'j');
 		chooseImage(950,400,60,60,'G');
 		chooseImage(950,460,60,60,'g');
 		chooseImage(950,520,60,60,'H');
@@ -119,14 +123,14 @@ public class Level {
 			current = sprites[3][1];
 			parent.image(current,x,y,width,height);					
 			break;
-		case 'C': case '9':
+		case 'C': case '9': case 'j':
 			parent.fill(255);
 			parent.stroke(255);
 			parent.rect(x,y,width,height);
 			current = sprites[2][0];
 			parent.image(current,x,y,width,height);
 			break;
-		case 'D': case '7':
+		case 'D': case '7': case 'i':
 			parent.fill(0);
 			parent.stroke(0);
 			parent.rect(x,y,width,height);
@@ -159,6 +163,20 @@ public class Level {
 			parent.stroke(0);
 			parent.rect(x,y,width,height);
 			current = sprites[3][1];
+			parent.image(current,x,y,width,height);
+			break;
+		case 'I':
+			parent.fill(255);
+			parent.stroke(255);
+			parent.rect(x, y, width, height);
+			current = sprites[4][0];
+			parent.image(current,x,y,width,height);
+			break;
+		case 'J':
+			parent.fill(0);
+			parent.stroke(0);
+			parent.rect(x, y, width, height);
+			current = sprites[4][1];
 			parent.image(current,x,y,width,height);
 			break;
 		default:

@@ -22,7 +22,7 @@ public class MapMaker extends PApplet{
 	
 	public void setup() {
 		spritesheet = loadImage("Data/Textures.png");
-		sprites = new PImage[4][2];
+		sprites = new PImage[5][2];
 		tileMap = new char[10][10];
 		for (int i = 0; i < sprites.length; i++) {
 			for (int j = 0; j < sprites[i].length; j++) {
@@ -67,7 +67,10 @@ public class MapMaker extends PApplet{
 			rect(1050,100+i*60,60,60);
 		}
 		for (int i = 0; i < 2; i++) {
-			rect(850,400+i*60,60,60);
+			rect(750,400+i*60,60,60);
+		}
+		for (int i = 0; i < 4; i++) {
+			rect(850,280+i*60,60,60);
 		}
 		for (int i = 0; i < 4; i++) {
 			rect(950,400+i*60,60,60);
@@ -120,16 +123,24 @@ public class MapMaker extends PApplet{
 				return '0';
 			} else if (y >= 160 && y <= 220) {
 				return '1';
+			} else if (y >= 400 && y <= 460) {
+				return 'A';
+			} else if (y >= 460 && y <= 520) {
+				return 'B';
 			}
 		} else if (x >= 850 && x <= 910) {
 			if (y >= 100 && y <= 160) {
 				return 'D';
 			} else if (y >= 160 && y <= 220) {
 				return 'C';
+			} else if (y >= 280 && y <= 340) {
+				return 'I';
 			} else if (y >= 400 && y <= 460) {
-				return 'A';
+				return 'i';
 			} else if (y >= 460 && y <= 520) {
-				return 'B';
+				return 'J';
+			} else if (y >= 520 && y <= 580) {
+				return 'j';
 			}
 		} else if (x >= 950 && x <= 1010) {
 			if (y >= 100 && y <= 160) {

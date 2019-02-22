@@ -22,6 +22,10 @@
 // g-Shifting black button inactive
 // H-Shifting white button active
 // h-Shifting white button inactive
+// I-Movable black active
+// i-Movable black inactive
+// J-Movable white active
+// j-Movable white inactive
 ---
 D D D D D D D D D D
 D 1 1 1 1 1 1 1 A D
@@ -78,6 +82,18 @@ D D D D D D F D D D
 D 1 1 h D D h 1 1 D 
 D 8 D D D D D D 8 D 
 ---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 1 A D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 I 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 j 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D D D D D D D D D D 
+---
+
 
 
 

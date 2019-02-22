@@ -15,7 +15,7 @@ public class LightDark extends PApplet{
 	private String[][] levelFile;
 	private PImage[][] sprites;
 	private PImage spritesheet;
-	private int level = 0;
+	private int level = 5;
 	private GameCleared gameEnd;
 	
 	public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class LightDark extends PApplet{
 
 	public void setup() {
 		spritesheet = loadImage("Data/Textures.png");
-		sprites = new PImage[4][2];
+		sprites = new PImage[5][2];
 		for (int i = 0; i < sprites.length; i++) {
 			for (int j = 0; j < sprites[i].length; j++) {
 				sprites[i][j] = spritesheet.get(j*90,i*90,90,90);
@@ -83,32 +83,64 @@ public class LightDark extends PApplet{
 		if (key == 'W' || key == 'w') {
 			if (y > 0) {
 				if (!levelObject.checkWall(x, y-1)) {
-					player.move('n');
-					checkKeyTile();
+					if (!levelObject.checkMovable(x, y-1)) {
+						player.move('n');
+						checkKeyTile();
+					} else {
+						if (levelObject.checkValidMove(x, y-2)) {
+							player.move('n');
+							levelObject.moveBlock(x, y-1, 'n');
+							checkKeyTile();
+						}
+					}
 				}
 			}
 		}
 		if (key == 'S' || key == 's') {
 			if (y < cells - 1) {
 				if (!levelObject.checkWall(x, y+1)) {
-					player.move('s');
-					checkKeyTile();
+					if (!levelObject.checkMovable(x, y+1)) {
+						player.move('s');
+						checkKeyTile();
+					} else {
+						if (levelObject.checkValidMove(x, y+2)) {
+							player.move('s');
+							levelObject.moveBlock(x, y+1, 's');
+							checkKeyTile();
+						}
+					}
 				}
 			}
 		}
 		if (key == 'A' || key == 'a') {
 			if (x > 0) {
 				if (!levelObject.checkWall(x-1, y)) {
-					player.move('w');
-					checkKeyTile();
+					if (!levelObject.checkMovable(x-1, y)) {
+						player.move('w');
+						checkKeyTile();
+					} else {
+						if (levelObject.checkValidMove(x-2, y)) {
+							player.move('w');
+							levelObject.moveBlock(x-1, y, 'w');
+							checkKeyTile();
+						}
+					}
 				}
 			}
 		}
 		if (key == 'D' || key == 'd') {
-			if (x < cells + 1) {
+			if (x < cells - 1) {
 				if (!levelObject.checkWall(x+1, y)) {
-					player.move('e');
-					checkKeyTile();
+					if (!levelObject.checkMovable(x+1, y)) {
+						player.move('e');
+						checkKeyTile();
+					} else {
+						if (levelObject.checkValidMove(x+2, y)) {
+							player.move('e');
+							levelObject.moveBlock(x+1, y, 'e');
+							checkKeyTile();
+						}
+					}
 				}
 			}
 		}
