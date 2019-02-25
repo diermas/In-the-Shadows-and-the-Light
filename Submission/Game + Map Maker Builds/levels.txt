@@ -1,0 +1,107 @@
+---
+// KEY:
+// 0-Black floor
+// 1-White floor
+// 2-White key active
+// 3-White key inactive
+// 4-Black key active
+// 5-Black key inactive
+// 6-White door active
+// 7-White door inactive
+// 8-Black door active
+// 9-Black door inactive
+// A-Black button active
+// B-White button active
+// C-White wall active
+// D-Black wall active
+// E-Shifting white active
+// e-Shifting white inactive
+// F-Shifting black active
+// f-Shifting black inactive
+// G-Shifting black button active
+// g-Shifting black button inactive
+// H-Shifting white button active
+// h-Shifting white button inactive
+// I-Movable black active
+// i-Movable black inactive
+// J-Movable white active
+// j-Movable white inactive
+// K-Black hole active
+// k-Black hole inactive
+// L-White hole active
+// l-White hole inactive
+---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 4 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 8 D D D D D D D D 
+---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 A 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 3 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 7 D D D D D D D D 
+---
+D D D D D D D D D D 
+D 1 1 G F 1 1 1 1 D 
+D D D D D D D D 1 D 
+D 1 1 1 1 3 1 1 1 D 
+D 1 D D D D D D D D 
+D 1 1 1 1 h e 1 1 D 
+D D D D D D D D 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D D D D D D D D 8 D 
+---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 A 1 D 
+D D D D D j D D D D 
+D 1 1 3 1 1 1 1 1 D 
+D 1 D D D 1 D D D D 
+D 1 1 1 1 D 1 1 1 D 
+D A 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 8 D D D D D D D D 
+---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 4 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D D D 1 1 1 1 1 1 D 
+D 1 F 1 1 l 1 1 A D 
+D 8 D D D D D D D D 
+---
+D D D D D D D D D D 
+D 1 1 1 1 1 1 1 l D 
+D 1 1 1 1 A 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D D D D D D D D F D 
+D 1 1 1 1 4 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D 1 1 1 1 1 1 1 1 D 
+D D D D D D D D 8 D 
+---
+
+
+
+
+
+
+
+

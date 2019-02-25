@@ -11,6 +11,7 @@ public class GameCleared {
 		this.width = width;
 	}
 	
+	// Render the game over screen
 	public void render() {
 		parent.fill(255);
 		parent.stroke(255);

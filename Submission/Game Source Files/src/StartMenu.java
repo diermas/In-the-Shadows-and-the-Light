@@ -11,6 +11,7 @@ public class StartMenu {
 		this.width = width;
 	}
 	
+	// Render the start menu screen
 	public void render() {
 		parent.background(120);
 		parent.fill(0);
